@@ -58,3 +58,48 @@ header {
   justify-content: space-between;
   align-items: center;
 }
+
+
+// form
+#form {
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  width: 370px;
+  box-shadow: 0 0 6px 0px var(--dark);
+  margin-left: 16px;
+  padding: 20px 30px;
+
+  * {
+    box-sizing: inherit;
+    font-family: sans-sefif;
+  }
+}
+
+.form-input {
+  padding: 9px;
+  margin-bottom: 18px;
+  border-radius: 4px;
+  border: 1px solid var(--dark);
+  font-size: 18px;
+}
+
+.form-label {
+  margin-bottom: 6px;
+}
+
+.form-buttons {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.form-button {
+  height: 32px;
+  width: 32px;
+
+  & + & {
+    margin-left: 8px;
+  }
+}
+
+// form ends here
