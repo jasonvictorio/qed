@@ -31,3 +31,9 @@ h1,h2 {
   padding: 12px;
   font-size: 0.8em;
 }
+
+h2 {
+  border-bottom: 3px solid var(--dark);
+  padding-bottom: 12px;
+  margin-bottom: 24px;
+}
