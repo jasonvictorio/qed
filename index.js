@@ -19,6 +19,7 @@ var app = new Vue({
       inverseRelationshipName: '',
       individual: '',
       isFormVisible: false,
+      isModalVisible: false,
       dateTomorrow:  moment().add(1,'days').format('ddd, MMM-D-YYYY'),
     }
   },
@@ -50,6 +51,8 @@ var app = new Vue({
     handleClickFormClose () {
       this.isFormVisible = false
     },
+    hideModal () { this.isModalVisible = false },
+    showModal () { this.isModalVisible = true },
   }
 })
 
