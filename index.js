@@ -27,7 +27,15 @@ var app = new Vue({
       this.individual = ''
     },
     handleClickY () {
-      console.log('click y')
+      const payload = {
+        relationshipName: this.relationshipName,
+        inverseRelationshipName: this.inverseRelationshipName,
+        individual: this.individual,
+      }
+      $.post('/post', payload)
+        .fail(error => {
+          console.log(error)
+        })
     }
   }
 })
