@@ -14,7 +14,7 @@
       <script src="https://cdn.jsdelivr.net/npm/vue@2.6.11"></script>
 
 
-      <h1>Hi Jason! {{message}}</h1>
+      <h1>Hi Jason!</h1>
       <p>
         This test is designed to test your skills against what is typically
         expected from a front-end developer at QED software. Follow the
@@ -79,17 +79,17 @@
 
       <div id="form">
         <label class="form-label" for="relationshipName">Relationship Name</label>
-        <input class="form-input" type="text" id="relationshipName">
+        <input class="form-input" type="text" id="relationshipName" v-model="relationshipName">
 
         <label class="form-label" for="inverseRelationshipName">Relationship Name</label>
-        <input class="form-input" type="text" id="inverseRelationshipName">
+        <input class="form-input" type="text" id="inverseRelationshipName" v-model="inverseRelationshipName">
 
         <label class="form-label" for="individual">Individual</label>
-        <input class="form-input" type="search" id="individual" placeholder="Search">
+        <input class="form-input" type="search" id="individual" placeholder="Search" v-model="individual">
 
         <div class="form-buttons">
-          <button class="form-button form-button-x">x</button>
-          <button class="form-button form-button-y">y</button>
+          <button class="form-button form-button-x" v-on:click="handleClickX">x</button>
+          <button class="form-button form-button-y" v-on:click="handleClickY">y</button>
         </div>
       </div>
 

@@ -10,10 +10,24 @@ h2s.forEach(h2 => {
 })
 
 
-
+Vue.config.devtools = true
 var app = new Vue({
   el: '#app',
-  data: {
-    message: 'Hello Vue!'
+  data() {
+    return {
+      relationshipName: '',
+      inverseRelationshipName: '',
+      individual: '',
+    }
+  },
+  methods: {
+    handleClickX () {
+      this.relationshipName = ''
+      this.inverseRelationshipName = ''
+      this.individual = ''
+    },
+    handleClickY () {
+      console.log('click y')
+    }
   }
 })
