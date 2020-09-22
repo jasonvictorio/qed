@@ -18,7 +18,7 @@ var app = new Vue({
       relationshipName: '',
       inverseRelationshipName: '',
       individual: '',
-      isFormVisible: true,
+      isFormVisible: false,
     }
   },
   methods: {
