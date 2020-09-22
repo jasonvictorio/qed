@@ -22,6 +22,7 @@ var app = new Vue({
       individual: '',
       isFormVisible: false,
       isModalVisible: false,
+      isMenuVisible: false,
       dateTomorrow:  moment().add(1,'days').format('ddd, MMM-D-YYYY'),
       countries: countries,
     }
@@ -56,6 +57,9 @@ var app = new Vue({
     },
     hideModal () { this.isModalVisible = false },
     showModal () { this.isModalVisible = true },
+
+    hideMenu () { this.isMenuVisible = false },
+    toggleMenu () { this.isMenuVisible = !this.isMenuVisible },
   }
 })
 
