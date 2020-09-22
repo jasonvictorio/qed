@@ -1,0 +1,17 @@
+{
+  "name": "qed_frontend_test",
+  "version": "1.0.0",
+  "description": "A basic test for potential QED front-enders.",
+  "main": "index.js",
+  "scripts": {
+    "watch": "parcel index.html --no-cache",
+    "build": "parcel build index.html --no-cache"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "parcel-bundler": "^1.12.4",
+    "sass": "^1.26.10"
+  }
+}
