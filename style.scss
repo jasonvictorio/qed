@@ -114,7 +114,7 @@ header {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  background: rgba(0,0,0, 0.5);
+  background: rgba(0,0,0, 0.5) !important;
 }
 
 .form-close {
@@ -125,7 +125,7 @@ header {
 
 .modal {
   display: block;
-  background-color: rgba(0,0,0, 0.5)
+  background-color: rgba(0,0,0, 0.5) !important;
 }
 
 .slide-out {
@@ -149,4 +149,26 @@ header {
 .slide-out-close {
   display: block;
   margin-bottom: 10px;
+}
+
+
+// dark-mode
+.dark-mode {
+  * {
+    background-color: rgb(22,22,22);
+    color: white;
+  }
+
+  .slide-out {
+    background-color: rgb(33,33,33);
+  }
+
+  .logo {
+    filter: invert(100%);
+    background-color: transparent;
+  }
+
+  #form {
+    background-color: rgb(22,22,22);
+  }
 }

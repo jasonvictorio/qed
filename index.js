@@ -60,6 +60,10 @@ var app = new Vue({
 
     hideMenu () { this.isMenuVisible = false },
     toggleMenu () { this.isMenuVisible = !this.isMenuVisible },
+
+    toggleDarkMode () {
+      document.documentElement.classList.toggle('dark-mode')
+    },
   }
 })
 
