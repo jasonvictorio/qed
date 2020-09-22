@@ -19,6 +19,7 @@ var app = new Vue({
       inverseRelationshipName: '',
       individual: '',
       isFormVisible: false,
+      dateTomorrow:  moment().add(1,'days').format('ddd, MMM-D-YYYY'),
     }
   },
   methods: {
