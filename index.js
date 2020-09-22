@@ -18,6 +18,7 @@ var app = new Vue({
       relationshipName: '',
       inverseRelationshipName: '',
       individual: '',
+      isFormVisible: true,
     }
   },
   methods: {
@@ -40,6 +41,13 @@ var app = new Vue({
         .fail(error => {
           console.log(error)
         })
-    }
+    },
+
+    handleClickPopup () {
+      this.isFormVisible = true
+    },
+    handleClickFormClose () {
+      this.isFormVisible = false
+    },
   }
 })
