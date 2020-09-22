@@ -8,3 +8,12 @@ h2s.forEach(h2 => {
     .map(capitalizeFirstLetter)
     .join(' ')
 })
+
+
+
+var app = new Vue({
+  el: '#app',
+  data: {
+    message: 'Hello Vue!'
+  }
+})
