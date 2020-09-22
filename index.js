@@ -21,10 +21,13 @@ var app = new Vue({
     }
   },
   methods: {
-    handleClickX () {
+    clearForm () {
       this.relationshipName = ''
       this.inverseRelationshipName = ''
       this.individual = ''
+    },
+    handleClickX () {
+      this.clearForm()
     },
     handleClickY () {
       const payload = {
@@ -33,6 +36,7 @@ var app = new Vue({
         individual: this.individual,
       }
       $.post('/post', payload)
+        .done(this.clearForm())
         .fail(error => {
           console.log(error)
         })
