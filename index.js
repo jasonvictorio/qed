@@ -20,11 +20,13 @@ var app = new Vue({
       relationshipName: '',
       inverseRelationshipName: '',
       individual: '',
+
+      dateTomorrow:  moment().add(1,'days').format('ddd, MMM-D-YYYY'),
+      countries: countries,
+
       isFormVisible: false,
       isModalVisible: false,
       isMenuVisible: false,
-      dateTomorrow:  moment().add(1,'days').format('ddd, MMM-D-YYYY'),
-      countries: countries,
     }
   },
   methods: {
@@ -49,12 +51,9 @@ var app = new Vue({
         })
     },
 
-    handleClickPopup () {
-      this.isFormVisible = true
-    },
-    handleClickFormClose () {
-      this.isFormVisible = false
-    },
+    hideForm () { this.isFormVisible = false },
+    showForm () { this.isFormVisible = true },
+
     hideModal () { this.isModalVisible = false },
     showModal () { this.isModalVisible = true },
 
