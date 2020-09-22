@@ -1,3 +1,5 @@
+import { countries } from './countries'
+
 const capitalizeFirstLetter = string => {
   return string.charAt(0).toUpperCase() + string.slice(1);
 }
@@ -21,6 +23,7 @@ var app = new Vue({
       isFormVisible: false,
       isModalVisible: false,
       dateTomorrow:  moment().add(1,'days').format('ddd, MMM-D-YYYY'),
+      countries: countries,
     }
   },
   methods: {

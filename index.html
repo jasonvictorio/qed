@@ -187,6 +187,7 @@
       <p>Populate the dropdown below using <b>countries.js</b></p>
       <select id="countries">
         <option>Select a country</option>
+        <option v-for="country in countries" :key="country">{{country.name}}</option>
       </select>
 
       <h2>14. Menu slide out</h2>
