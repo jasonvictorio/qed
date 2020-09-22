@@ -36,6 +36,14 @@ h2 {
   border-bottom: 3px solid var(--dark);
   padding-bottom: 12px;
   margin-bottom: 24px;
+
+  &:hover {
+    text-decoration: underline;
+  }
+
+  &:after {
+    content: '_';
+  }
 }
 
 header {
