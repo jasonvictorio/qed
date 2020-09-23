@@ -11,23 +11,40 @@ h2s.forEach(h2 => {
     .join(' ')
 })
 
+Vue.component('qed-form', {
+  template: `
+    <div id="form">
+      <div class="form-field" :class="isFieldError('relationshipName') ? 'form-field-error' : ''">
+        <label class="form-label" for="relationshipName">Relationship Name</label>
+        <input class="form-input" type="text" id="relationshipName" v-model="relationshipName">
+        <span class="form-error">Relationship name is required</span>
+      </div>
 
-Vue.config.devtools = true
-var app = new Vue({
-  el: '#app',
+      <div class="form-field" :class="isFieldError('inverseRelationshipName') ? 'form-field-error' : ''">
+        <label class="form-label" for="inverseRelationshipName">Inverse Relationship Name</label>
+        <input class="form-input" type="text" id="inverseRelationshipName" v-model="inverseRelationshipName">
+        <span class="form-error">Inverse Relationship name is required</span>
+      </div>
+
+      <div class="form-field" :class="isFieldError('individual') ? 'form-field-error' : ''">
+        <label class="form-label" for="individual">Individual</label>
+        <input class="form-input" type="search" id="individual" placeholder="Search" v-model="individual">
+        <span class="form-error">Individual</span>
+      </div>
+
+      <div class="form-buttons">
+        <button class="form-button form-button-x" v-on:click="handleClickX"><i class="fa fa-times"></i></button>
+        <button class="form-button form-button-y" v-on:click="handleClickY"><i class="fa fa-check"></i></button>
+      </div>
+    </div>
+    <button class="form-close" v-on:click="hideForm">Close this modal</button>
+  `,
   data() {
     return {
       relationshipName: '',
       inverseRelationshipName: '',
       individual: '',
       errors: ['relationshipName'],
-
-      dateTomorrow:  moment().add(1,'days').format('ddd, MMM-D-YYYY'),
-      countries: countries,
-
-      isFormVisible: false,
-      isModalVisible: false,
-      isMenuVisible: false,
     }
   },
   methods: {
@@ -53,7 +70,24 @@ var app = new Vue({
           console.log(error)
         })
     },
+  }
+});
+// qed-form component ends here
 
+Vue.config.devtools = true
+var app = new Vue({
+  el: '#app',
+  data() {
+    return {
+      dateTomorrow:  moment().add(1,'days').format('ddd, MMM-D-YYYY'),
+      countries: countries,
+
+      isFormVisible: false,
+      isModalVisible: false,
+      isMenuVisible: false,
+    }
+  },
+  methods: {
     hideForm () { this.isFormVisible = false },
     showForm () { this.isFormVisible = true },
 
