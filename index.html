@@ -90,20 +90,20 @@
       <div class="form-container" v-show="isFormVisible">
         <div id="form">
           <div class="form-field" :class="isFieldError('relationshipName') ? 'form-field-error' : ''">
-          <label class="form-label" for="relationshipName">Relationship Name</label>
-          <input class="form-input" type="text" id="relationshipName" v-model="relationshipName">
+            <label class="form-label" for="relationshipName">Relationship Name</label>
+            <input class="form-input" type="text" id="relationshipName" v-model="relationshipName">
             <span class="form-error">Relationship name is required</span>
           </div>
 
           <div class="form-field" :class="isFieldError('inverseRelationshipName') ? 'form-field-error' : ''">
             <label class="form-label" for="inverseRelationshipName">Inverse Relationship Name</label>
-          <input class="form-input" type="text" id="inverseRelationshipName" v-model="inverseRelationshipName">
+            <input class="form-input" type="text" id="inverseRelationshipName" v-model="inverseRelationshipName">
             <span class="form-error">Inverse Relationship name is required</span>
           </div>
 
           <div class="form-field" :class="isFieldError('individual') ? 'form-field-error' : ''">
-          <label class="form-label" for="individual">Individual</label>
-          <input class="form-input" type="search" id="individual" placeholder="Search" v-model="individual">
+            <label class="form-label" for="individual">Individual</label>
+            <input class="form-input" type="search" id="individual" placeholder="Search" v-model="individual">
             <span class="form-error">Individual</span>
           </div>
 
