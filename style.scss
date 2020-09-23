@@ -165,10 +165,16 @@ header {
 .form-search-container {
   display: flex;
   position: relative;
+  margin-bottom: 18px;
 
   .form-input {
     width: 100%;
     padding-right: 32px;
+    margin-bottom: 0;
+  }
+
+  .form-error {
+    margin-top: 6px;
   }
 }
 
@@ -227,5 +233,9 @@ header {
 
   #form {
     background-color: rgb(22,22,22);
+  }
+
+  .form-field-error * {
+    color: #f76b6b
   }
 }
