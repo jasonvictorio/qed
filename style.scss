@@ -68,13 +68,17 @@ header {
   display: flex;
   flex-direction: column;
   width: 370px;
-  box-shadow: 0 0 6px 0px var(--dark);
+  box-shadow: 0 0 11px 2px rgb(206 206 222);
   margin-left: 16px;
   padding: 20px 30px;
+  color: #c6c6c6;
 
   * {
     box-sizing: inherit;
-    font-family: sans-sefif;
+  }
+
+  ::placeholder {
+    color: #c6c6c6;
   }
 }
 
@@ -82,12 +86,13 @@ header {
   padding: 9px;
   margin-bottom: 18px;
   border-radius: 4px;
-  border: 1px solid var(--dark);
+  border: 1px solid #c6c6c6;
   font-size: 18px;
 }
 
 .form-label {
   margin-bottom: 6px;
+  font-size: 14px;
 }
 
 .form-buttons {
@@ -98,9 +103,23 @@ header {
 .form-button {
   height: 32px;
   width: 32px;
+  border: none;
+  border-radius: 4px;
 
   & + & {
     margin-left: 8px;
+  }
+
+  &-x {
+    color: #bfbfbf;
+    border: 1px solid #bfbfbf;
+    background-color: transparent;
+
+  }
+
+  &-y {
+    background-color: #3397ca;
+    color: white;
   }
 }
 
