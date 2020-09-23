@@ -86,8 +86,10 @@ header {
   padding: 9px;
   margin-bottom: 18px;
   border-radius: 4px;
-  border: 1px solid #c6c6c6;
+  border: 1px solid currentColor;
   font-size: 18px;
+  color: inherit;
+  outline: none;
 }
 
 .form-label {
@@ -138,6 +140,21 @@ header {
 
 .form-close {
   margin-top: 8px;
+}
+
+.form-field {
+  display: flex;
+  flex-direction: column;
+}
+
+.form-error {
+  font-size: 12px;
+  margin-top: -12px;
+  margin-bottom: 18px;
+}
+
+.form-field-error {
+  color: #f76b6b;
 }
 
 // form ends here
