@@ -151,10 +151,15 @@ header {
   font-size: 12px;
   margin-top: -12px;
   margin-bottom: 18px;
+  display: none;
 }
 
 .form-field-error {
   color: #f76b6b;
+
+  .form-error {
+    display: block;
+  }
 }
 
 // form ends here
