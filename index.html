@@ -89,14 +89,23 @@
 
       <div class="form-container" v-show="isFormVisible">
         <div id="form">
+          <div class="form-field">
           <label class="form-label" for="relationshipName">Relationship Name</label>
           <input class="form-input" type="text" id="relationshipName" v-model="relationshipName">
+            <span class="form-error">Relationship name is required</span>
+          </div>
 
-          <label class="form-label" for="inverseRelationshipName">Relationship Name</label>
+          <div class="form-field form-field-error">
+            <label class="form-label" for="inverseRelationshipName">Inverse Relationship Name</label>
           <input class="form-input" type="text" id="inverseRelationshipName" v-model="inverseRelationshipName">
+            <span class="form-error">Inverse Relationship name is required</span>
+          </div>
 
+          <div class="form-field">
           <label class="form-label" for="individual">Individual</label>
           <input class="form-input" type="search" id="individual" placeholder="Search" v-model="individual">
+            <span class="form-error">Individual</span>
+          </div>
 
           <div class="form-buttons">
             <button class="form-button form-button-x" v-on:click="handleClickX"><i class="fa fa-times"></i></button>
