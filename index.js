@@ -47,6 +47,11 @@ Vue.component('qed-form', {
       errors: ['relationshipName'],
     }
   },
+  watch: {
+    relationshipName () { this.errors = this.errors.filter(e => e !== 'relationshipName') },
+    inverseRelationshipName () { this.errors = this.errors.filter(e => e !== 'inverseRelationshipName') },
+    individual () { this.errors = this.errors.filter(e => e !== 'individual') },
+  },
   methods: {
     clearForm () {
       this.relationshipName = ''
