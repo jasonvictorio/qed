@@ -40,7 +40,6 @@ Vue.component('qed-form', {
         <button class="form-button form-button-y" type="submit"><i class="fa fa-check"></i></button>
       </div>
     </form>
-    <button class="form-close" v-on:click="hideForm">Close this modal</button>
   `,
   data() {
     return {
