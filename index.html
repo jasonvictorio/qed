@@ -1,6 +1,7 @@
 <html>
   <head>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" />
     <link rel="stylesheet" href="./style.scss" />
     <script src="./index.js" defer></script>
   </head>
@@ -98,8 +99,8 @@
           <input class="form-input" type="search" id="individual" placeholder="Search" v-model="individual">
 
           <div class="form-buttons">
-            <button class="form-button form-button-x" v-on:click="handleClickX">x</button>
-            <button class="form-button form-button-y" v-on:click="handleClickY">y</button>
+            <button class="form-button form-button-x" v-on:click="handleClickX"><i class="fa fa-times"></i></button>
+            <button class="form-button form-button-y" v-on:click="handleClickY"><i class="fa fa-check"></i></button>
           </div>
         </div>
         <button class="form-close" v-on:click="hideForm">Close this modal</button>
