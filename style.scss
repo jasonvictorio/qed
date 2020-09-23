@@ -162,6 +162,22 @@ header {
   }
 }
 
+.form-search-container {
+  display: flex;
+  position: relative;
+
+  .form-input {
+    width: 100%;
+    padding-right: 32px;
+  }
+}
+
+.form-search-icon {
+  position: absolute;
+  right: 12px;
+  top: 12px;
+}
+
 // form ends here
 
 .modal {

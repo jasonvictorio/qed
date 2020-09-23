@@ -28,7 +28,10 @@ Vue.component('qed-form', {
 
       <div class="form-field" :class="isFieldError('individual') ? 'form-field-error' : ''">
         <label class="form-label" for="individual">Individual</label>
-        <input class="form-input" type="search" id="individual" placeholder="Search" v-model="individual">
+        <div class="form-search-container">
+          <input class="form-input" type="text" id="individual" placeholder="Search" v-model="individual">
+          <i class="fa fa-search form-search-icon"></i>
+        </div>
         <span class="form-error">Individual is required</span>
       </div>
 
