@@ -58,7 +58,18 @@ Vue.component('qed-form', {
     handleClickX () {
       this.clearForm()
     },
+    validateForm () {
+      this.errors = []
+      if (this.relationshipName.length === 0) this.errors.push('relationshipName')
+      if (this.inverseRelationshipName.length === 0) this.errors.push('inverseRelationshipName')
+      if (this.individual.length === 0) this.errors.push('individual')
+    },
     handleClickY () {
+      this.validateForm()
+      if (this.errors.length) return
+      this.submit()
+    },
+    submit () {
       const payload = {
         relationshipName: this.relationshipName,
         inverseRelationshipName: this.inverseRelationshipName,
