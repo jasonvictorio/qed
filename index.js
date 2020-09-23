@@ -13,7 +13,7 @@ h2s.forEach(h2 => {
 
 Vue.component('qed-form', {
   template: `
-    <div id="form">
+    <form id="form" v-on:submit.prevent="handleClickY">
       <div class="form-field" :class="isFieldError('relationshipName') ? 'form-field-error' : ''">
         <label class="form-label" for="relationshipName">Relationship Name</label>
         <input class="form-input" type="text" id="relationshipName" v-model="relationshipName">
@@ -36,10 +36,10 @@ Vue.component('qed-form', {
       </div>
 
       <div class="form-buttons">
-        <button class="form-button form-button-x" v-on:click="handleClickX"><i class="fa fa-times"></i></button>
-        <button class="form-button form-button-y" v-on:click="handleClickY"><i class="fa fa-check"></i></button>
+        <button class="form-button form-button-x" v-on:click="handleClickX" type="button"><i class="fa fa-times"></i></button>
+        <button class="form-button form-button-y" type="submit"><i class="fa fa-check"></i></button>
       </div>
-    </div>
+    </form>
     <button class="form-close" v-on:click="hideForm">Close this modal</button>
   `,
   data() {
