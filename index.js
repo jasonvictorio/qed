@@ -20,6 +20,7 @@ var app = new Vue({
       relationshipName: '',
       inverseRelationshipName: '',
       individual: '',
+      errors: ['relationshipName'],
 
       dateTomorrow:  moment().add(1,'days').format('ddd, MMM-D-YYYY'),
       countries: countries,
@@ -34,7 +35,9 @@ var app = new Vue({
       this.relationshipName = ''
       this.inverseRelationshipName = ''
       this.individual = ''
+      this.errors = []
     },
+    isFieldError (fieldName) { return this.errors.includes(fieldName) },
     handleClickX () {
       this.clearForm()
     },
