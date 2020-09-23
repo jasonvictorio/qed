@@ -47,7 +47,7 @@ Vue.component('qed-form', {
       relationshipName: '',
       inverseRelationshipName: '',
       individual: '',
-      errors: ['relationshipName'],
+      errors: [],
     }
   },
   watch: {
